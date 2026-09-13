@@ -1,7 +1,24 @@
 const { test, expect } = require('@playwright/test');
+const { LoginPage } = require('../pages/LoginPage');
 
-test.describe('Login Page Tests', () => {
-    test('should verify login page functionality', async ({ page }) => {
-        // Add your test code here
-    });
+test('Testing Url link should open Successfully', async ({ page }) => {
+
+    const login = new LoginPage(page);
+
+    await login.gotoLoginPage();
+
+    await login.login("rishabh@gmail.com", "123456789");
+
+
+
 });
+
+
+
+
+
+
+
+
+
+
