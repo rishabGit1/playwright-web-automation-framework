@@ -1,7 +1,8 @@
-const { test, expect } = require('@playwright/test');
+import { test, expect } from '@playwright/test';
+import { SignupPage } from '../pages/SignupPage';
 
-test.describe('Signup Page Tests', () => {
-    test('should verify signup page functionality', async ({ page }) => {
-        // Add your test code here
-    });
+test("User should be able to Signup Successfully", async ({ page }) => {
+    const signup = new SignupPage(page);
+    await signup.gotoSignUp();
+    await signup.signupAsNewUser();
 });

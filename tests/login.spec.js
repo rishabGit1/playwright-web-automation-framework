@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../pages/LoginPage');
 
-test('Testing Url link should open Successfully', async ({ page }) => {
+test('User Should able to Login Successfully', async ({ page }) => {
 
     const login = new LoginPage(page);
 
