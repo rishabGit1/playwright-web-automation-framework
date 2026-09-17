@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../pages/LoginPage');
 const { KPIPage } = require('../pages/KpiPage');
 
-test('Owner is able to Create New KPI Successfully', async ({ page }) => {
+test('User Should able to Create New KPI Successfully', async ({ page }) => {
 
 
     const login = new LoginPage(page);

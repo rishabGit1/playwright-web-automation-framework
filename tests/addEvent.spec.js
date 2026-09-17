@@ -3,7 +3,7 @@ const { LoginPage } = require('../pages/LoginPage');
 const { AddEventPage } = require('../pages/AddEventPage');
 
 
-test('User is able to create Successfully New Event', async ({ page }) => {
+test('User Should able to Create New Event Successfully', async ({ page }) => {
 
 
     const login = new LoginPage(page);
