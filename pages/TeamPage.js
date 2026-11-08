@@ -41,7 +41,7 @@ export class TeamPage {
         await this.clickondropdown.click();
         await this.clickonestheticians.click();
         await this.clickonselecthiringdate.click();
-        await this.clickongridcell.click();
+       // await this.clickongridcell.click();
         await this.clickonaddmember.click();
     }
 

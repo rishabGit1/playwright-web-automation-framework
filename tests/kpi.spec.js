@@ -12,9 +12,8 @@ test('User Should able to Create New KPI Successfully', async ({ page }) => {
     await login.login("rishabh@gmail.com", "123456789");
     await kpi.createKpi();
 
-
-
-
-
+    // Assertions: verify KPI creation dialog closed and KPIs section is active
+    await expect(kpi.kpicreatebutton).not.toBeVisible();
+    await expect(kpi.kpipage).toBeVisible();
 
 });

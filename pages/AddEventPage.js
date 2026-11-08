@@ -24,8 +24,9 @@ export class AddEventPage {
         await this.gotocalenderpage.click();
         await this.addeventbtn.click();
         await this.eventname.fill('Test Event');
-        await this.selectdate.click();
-        await this.date.click();
+        //await this.selectdate.click();
+        //await this.date.click();
+        await this.starttime.click();
         await this.starttime.fill('17:47');
         await this.endtime.fill('18:47');
         await this.favorite.fill('Test Favorite');

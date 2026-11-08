@@ -27,7 +27,7 @@ export class VendorsPage {
         await this.clickonrepname.click();
         await this.clickonrepname.fill("Test Rep");
         await this.clickonemail.click();
-        await this.clickonemail.fill("[EMAIL_ADDRESS]");
+        await this.clickonemail.fill("vendor@gmail.com");
         await this.clickoncountrycode.click();
         await this.clickonuscode.click();
         await this.clickonphonenumber.click();

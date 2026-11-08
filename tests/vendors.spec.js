@@ -14,8 +14,9 @@ test('User Should able to Create Vendor Successfully', async ({ page }) => {
     await login.login("rishabh@gmail.com", "Test@123");
     await vendorsPage.createVendorsPage();
 
-
-
+    // Assertions: verify add vendor modal closed and company appears in the vendor list
+    await expect(vendorsPage.clickonaddvendorbutton).not.toBeVisible();
+    await expect(page.getByText('ABC Logistics').first()).toBeVisible();
 
 })
 

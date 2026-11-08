@@ -11,4 +11,9 @@ test('User Should able to Forget Password Successfully', async ({ page }) => {
     await login.gotoLoginPage();
     await forgotpass.ForgotPassword("Rish@gmail.com");
 
+    // Assertions: verify password reset submitted and returned to login screen
+    await expect(forgotpass.resetbtn).not.toBeVisible();
+    await expect(login.EmailtxtBox).toBeVisible();
+    await expect(login.Loginbtn).toBeVisible();
+
 })

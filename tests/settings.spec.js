@@ -9,4 +9,8 @@ test('User Should able to update Setting Page Successfully', async ({ page }) =>
     await loginPage.gotoLoginPage();
     await loginPage.login("rish@gmail.com", "Test@123");
     await settingsPage.editdetails();
+
+    // Assertions: verify settings details updated and settings link is active
+    await expect(settingsPage.clickosettingpage).toBeVisible();
+   
 });

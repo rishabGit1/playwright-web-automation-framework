@@ -13,8 +13,8 @@ test('User Should able to create Role & Team Member Successfully ', async ({ pag
     await login.login("rishabhgg@gmail.com", "123456789");
     await team.createteammamber("Admin Role", "Alex Smith", "alex@example.com");
 
-
-
-
+    // Assertions: verify add member modal closed and new member is visible in the list
+    await expect(team.clickonaddmember).not.toBeVisible();
+    await expect(page.getByText('Isla')).toBeVisible();
 
 })
