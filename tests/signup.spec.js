@@ -9,5 +9,5 @@ test("User Should able to Signup Successfully", async ({ page }) => {
     // Assertions: verify signup completed and onboarding popup closed
     await expect(signup.signupbtn).not.toBeVisible();
     await expect(signup.hidepopup).not.toBeVisible();
-    await expect(page).toHaveURL('https://qa-owner-panel.netlify.app/dashboard');
+    await expect(page).toHaveURL(process.env.EXPECTED_URL);
 });

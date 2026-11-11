@@ -46,7 +46,7 @@ export class SignupPage {
     }
 
     async gotoSignUp() {
-        await this.page.goto('https://qa-owner-panel.netlify.app/');
+        await this.page.goto(process.env.BASE_URL);
     }
 
 
